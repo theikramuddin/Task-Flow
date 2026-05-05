@@ -1,4 +1,4 @@
-# TaskFlow — Team Task Manager
+# TaskFlow Team Task Manager
 
 MERN stack task management system with role-based access control.
 
@@ -21,7 +21,7 @@ MERN stack task management system with role-based access control.
 ```bash
 cd server
 cp .env.example .env
-# Edit .env — set MONGO_URI and JWT secrets
+# Edit .env and set MONGO_URI and JWT secrets
 npm install
 npm run dev        # runs on port 5000
 ```
@@ -76,12 +76,12 @@ npm run dev        # runs on port 5173, proxies /api to :5000
 ## Role-Based Access
 
 **Global roles** (stored on User):
-- `admin` — can bypass all project-level checks
-- `member` — default, needs project membership
+- `admin`: can bypass all project-level checks
+- `member`: default, needs project membership
 
 **Project roles** (stored on ProjectMember):
-- `admin` — manage members, update/delete project
-- `member` — view project, create/update tasks
+- `admin`: manage members, update/delete project
+- `member`: view project, create/update tasks
 
 ---
 
@@ -89,7 +89,7 @@ npm run dev        # runs on port 5173, proxies /api to :5000
 
 1. Push repo to GitHub
 2. Create two Railway services: one for `server/`, one for `client/`
-3. Add MongoDB plugin (or use Atlas — set MONGO_URI env var)
+3. Add MongoDB plugin (or use Atlas & set MONGO_URL env var)
 4. Set environment variables for the server service:
    - `MONGO_URI`, `JWT_SECRET`, `JWT_REFRESH_SECRET`, `CLIENT_URL`
 5. For client: set `VITE_API_URL` to your server's Railway URL
